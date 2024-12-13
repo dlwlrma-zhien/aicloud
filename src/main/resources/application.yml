@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: aicloud
+  cloud:
+    nacos:
+      config:
+        username: nacos
+        password: nacos
+        contextPath: /nacos
+        namespace: public
+        server-addr: localhost:8848
+        group: DEFAULT_GROUP
+        file-extension: yaml
+  config:
+    import: nacos:aicloud #Data ID
+server:
+  port: 8080
